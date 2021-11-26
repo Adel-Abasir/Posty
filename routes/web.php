@@ -17,7 +17,7 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::any('/', function () {
+Route::any('/home', function () {
     return view('home');
 })->name('home');
 

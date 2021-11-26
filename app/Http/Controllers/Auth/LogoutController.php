@@ -8,7 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 class LogoutController extends Controller
 {
-    public function store (){
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+    
+    public function store()
+    {
         Auth::logout();
 
         return redirect()->route('home');

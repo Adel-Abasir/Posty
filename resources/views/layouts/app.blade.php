@@ -19,14 +19,13 @@
 
         <ul class="flex items-center">
             @auth
-                <li><a href="" class="p-3">auth()->user()->name</a></li>
+                <li><a href="" class="p-3">{{ auth()->user()->name }}</a></li>
                 <li>
                     <form action="{{ route('logout') }}" method="post" class="p-3 inline">
                         @csrf
                         <button type="submit">Logout</button>
                     </form>
                 </li>
-                {{-- <li><a href="{{ route('logout') }}" class="p-3">Logout</a></li> --}}
             @endauth
 
             @guest
